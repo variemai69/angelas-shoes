@@ -16,8 +16,8 @@ body {
 }
 
 .logo {
-    width: 180px; /* Ρύθμισε αυτό το νούμερο (π.χ. 150px, 180px, 200px) ανάλογα με το πόσο μικρό το θέλεις */
-    max-width: 80%;
+    width: 220px; /* Ρύθμισε αυτό το νούμερο αν το θέλεις ακόμα πιο μικρό ή πιο μεγάλο */
+    max-width: 90%;
     height: auto;
 }
 
@@ -46,28 +46,33 @@ a:hover {
 </head>
 <body>
 
-<img src="logo.jpg" alt="Angela's Shoes"f="https://maps.google.com/?q=Grigoriou+Auxentiou+18,+Alimos+17455,+Greece" target="_blank">
-Grigoriou Auxentiou 18, Alimos 17455, Greece
-</a>
-</p>
+    <!-- Προστέθηκε το class="logo" -->
+    <img src="logo.jpg" alt="Angela's Shoes" class="logo">
 
-<p>
-tel:+302109956530
-+30 210 9956530
-</a>
-</p>
+    <!-- Προστέθηκε το div class="info" που έλειπε -->
+    <div class="info">
+        <p>
+            <a href="https://maps.google.com/?q=Grigoriou+Auxentiou+18,+Alimos+17455,+Greece" target="_blank">
+                Grigoriou Auxentiou 18, Alimos 17455, Greece
+            </a>
+        </p>
 
-<p>
-<a href="https://www.instagram.com/angelas.shoes/" target="_blank">
-@angelas.shoes
-</a>
-</p>
+        <p>
+            <a href="tel:+302109956530">
+                +30 210 9956530
+            </a>
+        </p>
 
-</div>
+        <p>
+            <a href="https://www.instagram.com/angelas.shoes/" target="_blank">
+                @angelas.shoes
+            </a>
+        </p>
+    </div>
 
-<div class="construction">
-Website Under Construction
-</div>
+    <div class="construction">
+        Website Under Construction
+    </div>
 
 </body>
 </html>
