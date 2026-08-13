@@ -6,51 +6,77 @@
 <title>Angela's Shoes</title>
 
 <style>
-body {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 40px 20px;
-}
+    body {
+        background-color: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 50px 20px;
+    }
 
-.logo {
-    width: 120px; /* Ρύθμισε αυτό το νούμερο αν το θέλεις ακόμα πιο μικρό ή πιο μεγάλο */
-    max-width: 80%;
-    height: auto;
-}
+    .logo {
+        width: 80px;
+        max-width: 60%;
+        height: auto;
+        display: block;
+        margin: 0 auto 35px auto;
+    }
 
-.info {
-    margin-top: 30px;
-    font-size: 20px;
-    line-height: 2;
-}
+    .info {
+        font-size: 18px;
+        line-height: 1.6;
+    }
 
-a {
-    color: #fff;
-    text-decoration: none;
-}
+    .info p {
+        margin: 18px 0;
+    }
 
-a:hover {
-    text-decoration: underline;
-}
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
 
-.construction {
-    margin-top: 40px;
-    color: #999;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .construction {
+        margin-top: 50px;
+        color: #888;
+        font-size: 13px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 40px 15px;
+        }
+
+        .logo {
+            width: 70px;
+            margin-bottom: 30px;
+        }
+
+        .info {
+            font-size: 16px;
+        }
+
+        .construction {
+            margin-top: 45px;
+            font-size: 11px;
+        }
+    }
 </style>
 </head>
+
 <body>
 
-    <!-- Προστέθηκε το class="logo" -->
     <img src="logo.jpg" alt="Angela's Shoes" class="logo">
 
-    <!-- Προστέθηκε το div class="info" που έλειπε -->
     <div class="info">
+
         <p>
             <a href="https://maps.google.com/?q=Grigoriou+Auxentiou+18,+Alimos+17455,+Greece" target="_blank">
                 Grigoriou Auxentiou 18, Alimos 17455, Greece
@@ -68,6 +94,7 @@ a:hover {
                 @angelas.shoes
             </a>
         </p>
+
     </div>
 
     <div class="construction">
