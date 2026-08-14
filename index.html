@@ -17,20 +17,37 @@
 
     /* Μέγεθος Logo για Υπολογιστή */
     .logo {
-        width: 750px;
+        width: 500px;
         max-width: 90%;
         height: auto;
         display: block;
-        margin: 0 auto 35px auto;
+        margin: 0 auto 20px auto; /* Απόσταση από τη λευκή γραμμή (~ένα δάχτυλο) */
+    }
+
+    /* Λευκή Γραμμή */
+    .divider {
+        border: none;
+        border-top: 1px solid #fff;
+        width: 120px; /* Μήκος της γραμμής - μπορείς να το μεγαλώσεις π.χ. σε 200px ή 50% */
+        margin: 0 auto 30px auto;
+        opacity: 0.8;
     }
 
     .info {
         font-size: 18px;
-        line-height: 1.6;
+        line-height: 1.8;
+        max-width: 650px;
+        margin: 0 auto;
     }
 
     .info p {
-        margin: 18px 0;
+        margin: 16px 0;
+    }
+
+    .construction-note {
+        color: #ccc;
+        font-weight: bold;
+        letter-spacing: 1px;
     }
 
     a {
@@ -42,34 +59,26 @@
         text-decoration: underline;
     }
 
-    .construction {
-        margin-top: 50px;
-        color: #888;
-        font-size: 13px;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-    }
-
-    /* Ρυθμίσεις ειδικά για Κινητά (μέχρι 600px πλάτος οθόνης) */
+    /* Ρυθμίσεις για Κινητά */
     @media (max-width: 600px) {
         body {
-            padding: 30px 10px; /* Λίγο μικρότερο padding για να δώσει χώρο στο logo */
+            padding: 30px 15px;
         }
 
-        /* Αυξήθηκε το μέγεθος του logo για το κινητό */
         .logo {
             width: 340px; 
-            max-width: 95%; /* Πιάσε έως και το 95% της οθόνης του κινητού */
+            max-width: 95%;
+            margin-bottom: 15px;
+        }
+
+        .divider {
+            width: 90px;
             margin-bottom: 25px;
         }
 
         .info {
             font-size: 16px;
-        }
-
-        .construction {
-            margin-top: 40px;
-            font-size: 11px;
+            line-height: 1.7;
         }
     }
 </style>
@@ -77,32 +86,41 @@
 
 <body>
 
+    <!-- Λογότυπο -->
     <img src="logo.jpg" alt="Angela's Shoes" class="logo">
 
+    <!-- Ασπρη Γραμμή -->
+    <hr class="divider">
+
+    <!-- Πληροφορίες & Κείμενο -->
     <div class="info">
+        <p class="construction-note">
+            Our website is currently under construction.
+        </p>
 
         <p>
+            Visit our physical store at 
+            <br>
             <a href="https://maps.google.com/?q=Grigoriou+Auxentiou+18,+Alimos+17455,+Greece" target="_blank">
                 Grigoriou Auxentiou 18, Alimos 17455, Greece
             </a>
         </p>
 
         <p>
+            For inquiries or more details, call us at 
+            <br>
             <a href="tel:+302109956530">
                 +30 210 9956530
             </a>
         </p>
 
         <p>
+            Follow us on Instagram 
+            <br>
             <a href="https://www.instagram.com/angelas.shoes/" target="_blank">
                 @angelas.shoes
             </a>
         </p>
-
-    </div>
-
-    <div class="construction">
-        Website Under Construction
     </div>
 
 </body>
