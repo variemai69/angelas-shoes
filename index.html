@@ -63,6 +63,21 @@
         text-decoration: underline;
     }
 
+    /* Styling για το Google Translate Widget */
+    #google_translate_element {
+        margin-bottom: 25px;
+    }
+    .goog-te-gadget-simple {
+        background-color: #222 !important;
+        border: 1px solid #444 !important;
+        padding: 6px 12px !important;
+        border-radius: 6px !important;
+        font-size: 14px !important;
+    }
+    .goog-te-gadget-simple span {
+        color: #fff !important;
+    }
+
     /* Ρυθμίσεις για Κινητά */
     @media (max-width: 600px) {
         body {
@@ -92,6 +107,9 @@
     <img src="logo.jpg" alt="Angelas Shoes Logo" class="logo">
     <hr class="divider">
 
+    <!-- Κουμπί Μετάφρασης Google Translate -->
+    <div id="google_translate_element"></div>
+
     <div class="info">
         <p>
             Στο <strong>Angelas Shoes</strong> στον <strong>Άλιμο</strong> σας περιμένει η νέα συλλογή σε αυθεντικές <strong>Havaianas &amp; Ipanema</strong>, γυναικεία και ανδρικά υποδήματα, αλλά και μια μεγάλη ποικιλία από καλοκαιρινά είδη σε φανταστικές εκπτώσεις!
@@ -110,6 +128,18 @@
         <p>📞 <a href="tel:2109956530">210 9956530</a></p>
         <p>📸 <a href="https://www.instagram.com/angelas.shoes/" target="_blank" rel="noopener">Ακολουθήστε μας στο Instagram</a></p>
     </div>
+
+    <!-- Script για τη λειτουργία του Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'el',
+                includedLanguages: 'en,de,fr,it,es',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
