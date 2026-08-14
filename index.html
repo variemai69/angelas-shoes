@@ -16,7 +16,8 @@
         font-family: Arial, sans-serif;
         text-align: center;
         margin: 0;
-        padding: 50px 20px;
+        padding: 60px 20px 50px 20px; /* Λίγο παραπάνω padding πάνω για να μη καλύπτει το widget το logo */
+        position: relative;
     }
 
     /* Μέγεθος Logo για Υπολογιστή */
@@ -63,16 +64,19 @@
         text-decoration: underline;
     }
 
-    /* Styling για το Google Translate Widget */
+    /* Styling & Τοποθέτηση Google Translate Widget Πάνω Δεξιά */
     #google_translate_element {
-        margin-bottom: 25px;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 1000;
     }
     .goog-te-gadget-simple {
         background-color: #222 !important;
         border: 1px solid #444 !important;
-        padding: 6px 12px !important;
+        padding: 5px 10px !important;
         border-radius: 6px !important;
-        font-size: 14px !important;
+        font-size: 13px !important;
     }
     .goog-te-gadget-simple span {
         color: #fff !important;
@@ -81,7 +85,12 @@
     /* Ρυθμίσεις για Κινητά */
     @media (max-width: 600px) {
         body {
-            padding: 30px 15px;
+            padding: 70px 15px 30px 15px; /* Περισσότερος χώρος πάνω στο κινητό */
+        }
+
+        #google_translate_element {
+            top: 10px;
+            right: 10px;
         }
 
         .logo {
@@ -104,11 +113,11 @@
 </head>
 <body>
 
+    <!-- Κουμπί Μετάφρασης Google Translate (Πάνω Δεξιά) -->
+    <div id="google_translate_element"></div>
+
     <img src="logo.jpg" alt="Angelas Shoes Logo" class="logo">
     <hr class="divider">
-
-    <!-- Κουμπί Μετάφρασης Google Translate -->
-    <div id="google_translate_element"></div>
 
     <div class="info">
         <p>
@@ -134,7 +143,7 @@
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'el',
-                includedLanguages: 'en,de,fr,it,es',
+                includedLanguages: 'el,en,de,fr,it,es', // Προστέθηκαν τα 'el' (Ελληνικά)
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE
             }, 'google_translate_element');
         }
