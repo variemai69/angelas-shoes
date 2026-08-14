@@ -53,14 +53,14 @@
     /* Ρυθμίσεις ειδικά για Κινητά (μέχρι 600px πλάτος οθόνης) */
     @media (max-width: 600px) {
         body {
-            padding: 40px 15px;
+            padding: 30px 10px; /* Λίγο μικρότερο padding για να δώσει χώρο στο logo */
         }
 
-        /* Διορθώθηκε από 70px σε 280px για να φαίνεται σωστά στο κινητό */
+        /* Αυξήθηκε το μέγεθος του logo για το κινητό */
         .logo {
-            width: 280px;
-            max-width: 85%;
-            margin-bottom: 30px;
+            width: 340px; 
+            max-width: 95%; /* Πιάσε έως και το 95% της οθόνης του κινητού */
+            margin-bottom: 25px;
         }
 
         .info {
@@ -68,7 +68,7 @@
         }
 
         .construction {
-            margin-top: 45px;
+            margin-top: 40px;
             font-size: 11px;
         }
     }
