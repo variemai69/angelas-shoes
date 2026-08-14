@@ -15,9 +15,10 @@
         padding: 50px 20px;
     }
 
+    /* Μέγεθος Logo για Υπολογιστή */
     .logo {
-        width: 600px;
-        max-width: 65%;
+        width: 350px;
+        max-width: 80%;
         height: auto;
         display: block;
         margin: 0 auto 35px auto;
@@ -49,13 +50,16 @@
         text-transform: uppercase;
     }
 
+    /* Ρυθμίσεις ειδικά για Κινητά (μέχρι 600px πλάτος οθόνης) */
     @media (max-width: 600px) {
         body {
             padding: 40px 15px;
         }
 
+        /* Διορθώθηκε από 70px σε 280px για να φαίνεται σωστά στο κινητό */
         .logo {
-            width: 70px;
+            width: 280px;
+            max-width: 85%;
             margin-bottom: 30px;
         }
 
