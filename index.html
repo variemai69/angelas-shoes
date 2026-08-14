@@ -10,14 +10,24 @@
 <meta name="keywords" content="Havaianas, Ipanema, σαγιονάρες, Άλιμος, Angelas Shoes, παπούτσια Άλιμος, καλοκαιρινά σανδάλια, καφτάνια, τσάντες">
 
 <style>
+    * {
+        box-sizing: border-box;
+    }
+
     body {
         background-color: #000;
         color: #fff;
         font-family: Arial, sans-serif;
         text-align: center;
         margin: 0;
-        padding: 60px 20px 50px 20px; /* Λίγο παραπάνω padding πάνω για να μη καλύπτει το widget το logo */
+        padding: 0;
         position: relative;
+    }
+
+    /* Πάνω τμήμα (Μαύρο με το Logo) */
+    .top-section {
+        background-color: #000;
+        padding: 60px 20px 20px 20px;
     }
 
     /* Μέγεθος Logo για Υπολογιστή */
@@ -26,16 +36,23 @@
         max-width: 90%;
         height: auto;
         display: block;
-        margin: 0 auto 20px auto;
+        margin: 0 auto;
     }
 
-    /* Λευκή Γραμμή σε όλο το πλάτος της οθόνης */
+    /* Λευκή Γραμμή */
     .divider {
         border: none;
         border-top: 1px solid #fff;
-        width: calc(100% + 40px);
-        margin: 0 -20px 30px -20px;
-        opacity: 0.8;
+        width: 100%;
+        margin: 0;
+        opacity: 0.9;
+    }
+
+    /* Κάτω τμήμα (Πορτοκαλί με Μαύρα Γράμματα) */
+    .bottom-section {
+        background-color: #ff6600; /* Ζωντανό καλοκαιρινό πορτοκαλί */
+        color: #000;
+        padding: 40px 20px 60px 20px;
     }
 
     .info {
@@ -50,18 +67,19 @@
     }
 
     .construction-note {
-        color: #ccc;
+        color: #111;
         font-weight: bold;
         letter-spacing: 1px;
     }
 
-    a {
-        color: #fff;
-        text-decoration: none;
+    .info a {
+        color: #000;
+        font-weight: bold;
+        text-decoration: underline;
     }
 
-    a:hover {
-        text-decoration: underline;
+    .info a:hover {
+        color: #333;
     }
 
     /* Styling & Τοποθέτηση Google Translate Widget Πάνω Δεξιά */
@@ -84,8 +102,8 @@
 
     /* Ρυθμίσεις για Κινητά */
     @media (max-width: 600px) {
-        body {
-            padding: 70px 15px 30px 15px; /* Περισσότερος χώρος πάνω στο κινητό */
+        .top-section {
+            padding: 70px 15px 15px 15px;
         }
 
         #google_translate_element {
@@ -96,12 +114,10 @@
         .logo {
             width: 340px; 
             max-width: 95%;
-            margin-bottom: 15px;
         }
 
-        .divider {
-            width: calc(100% + 30px);
-            margin: 0 -15px 25px -15px;
+        .bottom-section {
+            padding: 30px 15px 40px 15px;
         }
 
         .info {
@@ -116,26 +132,34 @@
     <!-- Κουμπί Μετάφρασης Google Translate (Πάνω Δεξιά) -->
     <div id="google_translate_element"></div>
 
-    <img src="logo.jpg" alt="Angelas Shoes Logo" class="logo">
+    <!-- Πάνω Μέρος: Μαύρο Φόντο & Logo -->
+    <div class="top-section">
+        <img src="logo.jpg" alt="Angelas Shoes Logo" class="logo">
+    </div>
+
+    <!-- Διαχωριστική Λευκή Γραμμή -->
     <hr class="divider">
 
-    <div class="info">
-        <p>
-            Στο <strong>Angelas Shoes</strong> στον <strong>Άλιμο</strong> σας περιμένει η νέα συλλογή σε αυθεντικές <strong>Havaianas &amp; Ipanema</strong>, γυναικεία και ανδρικά υποδήματα, αλλά και μια μεγάλη ποικιλία από καλοκαιρινά είδη σε φανταστικές εκπτώσεις!
-        </p>
-        <p>
-            Ανακαλύψτε μοναδικές επιλογές σε καφτάνια, καπέλα, τσάντες, πετσέτες θαλάσσης, σαγιονάρες και καλοκαιρινά αξεσουάρ, ιδανικά για τις διακοπές και τις καλοκαιρινές σας εμφανίσεις. Επιλέξτε τα αγαπημένα σας προϊόντα από κορυφαία brands και επωφεληθείτε από τις μεγάλες προσφορές και τις εκπτωτικές τιμές μας.
-        </p>
-        <p>
-            Επισκεφθείτε το Angelas Shoes στον Άλιμο και βρείτε όλα όσα χρειάζεστε για το καλοκαίρι, σε υπέροχες τιμές και μοναδικές εκπτώσεις!
-        </p>
+    <!-- Κάτω Μέρος: Πορτοκαλί Φόντο & Μαύρο Κείμενο -->
+    <div class="bottom-section">
+        <div class="info">
+            <p>
+                Στο <strong>Angelas Shoes</strong> στον <strong>Άλιμο</strong> σας περιμένει η νέα συλλογή σε αυθεντικές <strong>Havaianas &amp; Ipanema</strong>, γυναικεία και ανδρικά υποδήματα, αλλά και μια μεγάλη ποικιλία από καλοκαιρινά είδη σε φανταστικές εκπτώσεις!
+            </p>
+            <p>
+                Ανακαλύψτε μοναδικές επιλογές σε καφτάνια, καπέλα, τσάντες, πετσέτες θαλάσσης, σαγιονάρες και καλοκαιρινά αξεσουάρ, ιδανικά για τις διακοπές και τις καλοκαιρινές σας εμφανίσεις. Επιλέξτε τα αγαπημένα σας προϊόντα από κορυφαία brands και επωφεληθείτε από τις μεγάλες προσφορές και τις εκπτωτικές τιμές μας.
+            </p>
+            <p>
+                Επισκεφθείτε το Angelas Shoes στον Άλιμο και βρείτε όλα όσα χρειάζεστε για το καλοκαίρι, σε υπέροχες τιμές και μοναδικές εκπτώσεις!
+            </p>
 
-        <p class="construction-note">Το νέο μας site σύντομα κοντά σας!</p>
+            <p class="construction-note">Το νέο μας site σύντομα κοντά σας!</p>
 
-        <!-- Διεύθυνση με σύνδεσμο για Google Maps -->
-        <p>📍 <a href="https://maps.google.com/?q=Γρηγορίου+Αυξεντίου+18,+Άλιμος+174+55" target="_blank" rel="noopener">Γρ. Αυξεντίου 18, Άλιμος 174 55</a></p>
-        <p>📞 <a href="tel:2109956530">210 9956530</a></p>
-        <p>📸 <a href="https://www.instagram.com/angelas.shoes/" target="_blank" rel="noopener">Ακολουθήστε μας στο Instagram</a></p>
+            <!-- Διεύθυνση με σύνδεσμο για Google Maps -->
+            <p>📍 <a href="https://maps.google.com/?q=Γρηγορίου+Αυξεντίου+18,+Άλιμος+174+55" target="_blank" rel="noopener">Γρ. Αυξεντίου 18, Άλιμος 174 55</a></p>
+            <p>📞 <a href="tel:2109956530">210 9956530</a></p>
+            <p>📸 <a href="https://www.instagram.com/angelas.shoes/" target="_blank" rel="noopener">Ακολουθήστε μας στο Instagram</a></p>
+        </div>
     </div>
 
     <!-- Script για τη λειτουργία του Google Translate -->
@@ -143,7 +167,7 @@
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'el',
-                includedLanguages: 'el,en,de,fr,it,es', // Προστέθηκαν τα 'el' (Ελληνικά)
+                includedLanguages: 'el,en,de,fr,it,es',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE
             }, 'google_translate_element');
         }
