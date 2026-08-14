@@ -24,12 +24,12 @@
         margin: 0 auto 20px auto; /* Απόσταση από τη λευκή γραμμή (~ένα δάχτυλο) */
     }
 
-    /* Λευκή Γραμμή */
+    /* Λευκή Γραμμή σε όλο το πλάτος της οθόνης */
     .divider {
         border: none;
         border-top: 1px solid #fff;
-        width: 120px; /* Μήκος της γραμμής - μπορείς να το μεγαλώσεις π.χ. σε 200px ή 50% */
-        margin: 0 auto 30px auto;
+        width: calc(100% + 40px); /* Απλώνεται σε όλη την οθόνη ακυρώνοντας το padding του body */
+        margin: 0 -20px 30px -20px;
         opacity: 0.8;
     }
 
@@ -72,8 +72,8 @@
         }
 
         .divider {
-            width: 90px;
-            margin-bottom: 25px;
+            width: calc(100% + 30px); /* Προσαρμογή για τα περιθώρια του κινητού */
+            margin: 0 -15px 25px -15px;
         }
 
         .info {
@@ -89,7 +89,7 @@
     <!-- Λογότυπο -->
     <img src="logo.jpg" alt="Angela's Shoes" class="logo">
 
-    <!-- Ασπρη Γραμμή -->
+    <!-- Ασπρη Γραμμή σε όλο το πλάτος -->
     <hr class="divider">
 
     <!-- Πληροφορίες & Κείμενο -->
